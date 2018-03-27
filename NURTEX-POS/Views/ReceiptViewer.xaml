@@ -1,0 +1,25 @@
+﻿<Window x:Class="NURTEX_POS.Views.ReceiptViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NURTEX_POS.Views"
+        mc:Ignorable="d"
+        Title="ReceiptViewer"
+        Height="610" Width="550"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WebBrowser Name="WebBrowser1"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Height="561" 
+                    Margin="10,10,0,0" 
+                    VerticalAlignment="Top"
+                    Width="524"/>
+
+    </Grid>
+</Window>

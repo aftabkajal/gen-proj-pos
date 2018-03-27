@@ -1,0 +1,212 @@
+﻿<Window x:Class="NURTEX_POS.Views.MainPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NURTEX_POS.Views"
+        mc:Ignorable="d"
+        Title="MainPanel"
+        Height="500"
+        Width="700"
+        WindowStyle="None"
+        ResizeMode="CanMinimize"
+        WindowState="Maximized" Closing="Window_Closing">
+    <StackPanel>
+        <Canvas VerticalAlignment="Top"
+                HorizontalAlignment="Stretch"
+                Height="50"
+                Background="#885178">
+            <StackPanel>
+                <Grid Width="{Binding ActualWidth, 
+                    RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}" >
+                    <Label Content="NURTEX LifeStyle"
+                       VerticalAlignment="Center"
+                       Margin="10 10"
+                       FontWeight="Bold"
+                       FontSize="15"
+                       Grid.Column="0"
+                       Foreground="White"
+                       HorizontalAlignment="Left"/>
+
+                    <Button Name="MinimizeButton"
+                            HorizontalAlignment="Right"
+                            Width="50"
+                            Content="-"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderBrush="Transparent"
+                            FontSize="30"
+                            FontWeight="Bold"
+                            Click="MinimizeButton_Click"/>
+                </Grid>
+                
+            </StackPanel>
+        </Canvas>
+        <TabControl Width="{Binding ActualWidth, 
+                            RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}"
+                    Height="{Binding ActualWidth, 
+                            RelativeSource = {RelativeSource AncestorType = {x:Type Window}}}"
+                    TabStripPlacement="Left"
+                    MaxHeight="680">
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/home.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Home"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:LandingControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/bag(2).png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="New Sale"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+                
+                <Grid Background="White">
+                    <!--<local:NewSale/>-->
+                    <local:NewSaleControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/increasing-stocks-graphic-of-bars.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Sales Report"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:SalesReportControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0"
+                     Name="ManageStockTab"
+                     >
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/worker-loading-boxes(1).png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Manage Stock"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:ManageStockControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/add-to-shopping-bag.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="New Stock"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:NewStockControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0"
+                     Name="ManageStaffsTabItem">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/id-card.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Manage Staff"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:ManageStaffControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/settings.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Misc. Control"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <local:MisceControl/>
+                </Grid>
+            </TabItem>
+
+            <TabItem BorderBrush="Transparent"
+                     BorderThickness="0">
+                <TabItem.Header>
+                    <StackPanel Style="{StaticResource TabHeaderStakePanel}">
+                        <Image Source="../Contents/logout.png"
+                           Style="{StaticResource TabHeaderIcon}"/>
+                        <Label Content="Logout"
+                               Style="{StaticResource TabHeaderContent}"/>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid Background="White">
+                    <Border Background="WhiteSmoke"
+                            Margin="20"
+                            CornerRadius="10">
+                        <StackPanel>
+                            <Label Margin="20 30"
+                                   Content="Are you sure to Logout?"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"/>
+                            <Button Name="LogoutButton"
+                                    Content="Logout"
+                                    Margin="30 0"
+                                    Width="100"
+                                    Height="50"
+                                    FontSize="15"
+                                    Foreground="White"
+                                    Background="#885178"
+                                    BorderThickness="0" Click="LogoutButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+        <StackPanel Height="30"
+                    Background="#885178"
+                    VerticalAlignment="Bottom">
+            <Label Foreground="White"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Content="© XprezWare Team. Contact: roxy.xprez@gmail.com"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

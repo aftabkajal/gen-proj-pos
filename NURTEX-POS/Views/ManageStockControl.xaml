@@ -1,0 +1,234 @@
+﻿<UserControl x:Class="NURTEX_POS.Views.ManageStockControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NURTEX_POS.Views"
+             mc:Ignorable="d">
+    <StackPanel Margin="10"
+                    Width="NaN"
+                Loaded="UserControl_Loaded">
+        <Label Content="Manage Stocks."
+                   HorizontalAlignment="Center"
+                   FontFamily="Poppins"
+                   FontSize="14"
+                   FontWeight="Medium"
+                   />
+
+        <Separator Background="#885178"
+                       Margin="0 0 0 20"></Separator>
+
+        <StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Product ID"
+                           Grid.Column="0"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxProductId"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                             Grid.Column="1"
+                         KeyDown="TextBoxProductId_OnKeyDown"/>
+                <Label Content="Entry Date"
+                           Grid.Column="2"
+                           HorizontalAlignment="Right"
+                           />
+                <DatePicker Name="DatePickerEntryDate"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30" SelectedDateFormat="Long"
+                         FirstDayOfWeek="Saturday"
+                         IsEnabled="False"
+                         Grid.Column="3"/>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Product Name"
+                           Grid.Column="0"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxProductname"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                             Grid.Column="1"/>
+                <Label Content="Brand Name"
+                           Grid.Column="2"
+                           HorizontalAlignment="Right"/>
+                <TextBox Name="TextBoxBrand"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                         Grid.Column="3"/>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Product Color"
+                           Grid.Column="0"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxColor"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                             Grid.Column="1"/>
+                <Label Content="Size"
+                           Grid.Column="2"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxSize"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                         Grid.Column="3"/>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Buy per Unit"
+                           Grid.Column="0"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxUnitBuyingPrice"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                             Grid.Column="1"/>
+                <Label Content="Sale per Unit"
+                           Grid.Column="2"
+                           HorizontalAlignment="Right"
+                           Margin="10 0"/>
+                <TextBox Name="TextBoxUnitSellingPrice"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                         Grid.Column="3"/>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Quantity"
+                           Grid.Column="0"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxQuantity"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                             Grid.Column="1"/>
+                <Label Content="Possible Disc."
+                           Grid.Column="2"
+                           HorizontalAlignment="Right"
+                           />
+                <TextBox Name="TextBoxPossibleDiscount"
+                         Background="White"
+                         BorderBrush="#885178"
+                         BorderThickness="0 0 0 1"
+                         Foreground="Gray"
+                         Padding="5 5 5 5"
+                         Height="30"
+                         Grid.Column="3"/>
+            </Grid>
+
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Name="ButtonDeleteProduct"
+                        Margin="0 10 0 0"
+                        Background="#885178"
+                        Foreground="White"
+                        Height="40"
+                        Content="Delete Product"
+                        FontFamily="Poppins"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Grid.Column="1" Click="ButtonDeleteProduct_Click"/>
+                <Button Name="ButtonUpdateProduct"
+                        Margin="0 10 0 0"
+                        Background="#885178"
+                        Foreground="White"
+                        Height="40"
+                        Content="Update Product"
+                        FontFamily="Poppins"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Grid.Column="3" Click="ButtonUpdateProduct_Click"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel
+                Margin="0 20 0 0">
+            <DataGrid Name="DataGridInventory"
+                          IsReadOnly="True"
+                          VerticalScrollBarVisibility="Visible"
+                          MaxHeight="350"
+                          SelectionChanged="DataGridInventory_SelectionChanged"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

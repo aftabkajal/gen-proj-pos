@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10628B50-8EB0-452F-98F7-1A4D5D0B0FF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>POS.DataAccess</RootNamespace>
+    <AssemblyName>POS.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerAccess.cs" />
+    <Compile Include="DiscountTokenAccess.cs" />
+    <Compile Include="GenericDataAccess.cs" />
+    <Compile Include="Migrations\201801241422553_AddedAllModels.cs" />
+    <Compile Include="Migrations\201801241422553_AddedAllModels.Designer.cs">
+      <DependentUpon>201801241422553_AddedAllModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802040624239_OrderModelMod.cs" />
+    <Compile Include="Migrations\201802040624239_OrderModelMod.Designer.cs">
+      <DependentUpon>201802040624239_OrderModelMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802051755046_OrderModelMod1.cs" />
+    <Compile Include="Migrations\201802051755046_OrderModelMod1.Designer.cs">
+      <DependentUpon>201802051755046_OrderModelMod1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802071848205_ReModels.cs" />
+    <Compile Include="Migrations\201802071848205_ReModels.Designer.cs">
+      <DependentUpon>201802071848205_ReModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802072018040_FuncAdded.cs" />
+    <Compile Include="Migrations\201802072018040_FuncAdded.Designer.cs">
+      <DependentUpon>201802072018040_FuncAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802080552110_OrderMod.cs" />
+    <Compile Include="Migrations\201802080552110_OrderMod.Designer.cs">
+      <DependentUpon>201802080552110_OrderMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802111916242_Sales+OrdersMod.cs" />
+    <Compile Include="Migrations\201802111916242_Sales+OrdersMod.Designer.cs">
+      <DependentUpon>201802111916242_Sales+OrdersMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140822312_DiscountModelAdded.cs" />
+    <Compile Include="Migrations\201802140822312_DiscountModelAdded.Designer.cs">
+      <DependentUpon>201802140822312_DiscountModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140825127_DiscountModelMod.cs" />
+    <Compile Include="Migrations\201802140825127_DiscountModelMod.Designer.cs">
+      <DependentUpon>201802140825127_DiscountModelMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141748514_SaleMod.cs" />
+    <Compile Include="Migrations\201802141748514_SaleMod.Designer.cs">
+      <DependentUpon>201802141748514_SaleMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802151827260_UserModelAdd.cs" />
+    <Compile Include="Migrations\201802151827260_UserModelAdd.Designer.cs">
+      <DependentUpon>201802151827260_UserModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802171422079_CustomerModelAdd.cs" />
+    <Compile Include="Migrations\201802171422079_CustomerModelAdd.Designer.cs">
+      <DependentUpon>201802171422079_CustomerModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802171726058_AddedCustomerToSale.cs" />
+    <Compile Include="Migrations\201802171726058_AddedCustomerToSale.Designer.cs">
+      <DependentUpon>201802171726058_AddedCustomerToSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="NurTexDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleAccess.cs" />
+    <Compile Include="UserAccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProductAccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801241422553_AddedAllModels.resx">
+      <DependentUpon>201801241422553_AddedAllModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802040624239_OrderModelMod.resx">
+      <DependentUpon>201802040624239_OrderModelMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802051755046_OrderModelMod1.resx">
+      <DependentUpon>201802051755046_OrderModelMod1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802071848205_ReModels.resx">
+      <DependentUpon>201802071848205_ReModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802072018040_FuncAdded.resx">
+      <DependentUpon>201802072018040_FuncAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802080552110_OrderMod.resx">
+      <DependentUpon>201802080552110_OrderMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802111916242_Sales+OrdersMod.resx">
+      <DependentUpon>201802111916242_Sales+OrdersMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140822312_DiscountModelAdded.resx">
+      <DependentUpon>201802140822312_DiscountModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140825127_DiscountModelMod.resx">
+      <DependentUpon>201802140825127_DiscountModelMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141748514_SaleMod.resx">
+      <DependentUpon>201802141748514_SaleMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802151827260_UserModelAdd.resx">
+      <DependentUpon>201802151827260_UserModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802171422079_CustomerModelAdd.resx">
+      <DependentUpon>201802171422079_CustomerModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802171726058_AddedCustomerToSale.resx">
+      <DependentUpon>201802171726058_AddedCustomerToSale.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POS.Models\POS.Models.csproj">
+      <Project>{f48281cb-d061-4507-a28b-f390724eca8a}</Project>
+      <Name>POS.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

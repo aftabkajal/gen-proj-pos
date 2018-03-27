@@ -1,2 +1,54 @@
-# gen-proj-pos
+# NURTEX-POS
+
 A Point of Sale Application for a small business named NURTEX.
+
+## Getting Started
+
+To test the application just go to [this link](https://gitlab.com/hard-rox/NURTEX-PointOfSale/tree/master/NURTEX-POS/bin/Debug) and download Debug folder. Open NURTEX-POS.exe.config file and change the connection string here
+
+```
+<connectionStrings>
+    <add name="NurTexDb" connectionString="Data Source=DESKTOP-ADPGDPU;Initial Catalog=NurTexDb;Integrated Security=True" providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
+as your Server. Run NURTEX-POS.exe file to explore the beauty. Entity Framework will create Database for the first Time and creates a default Username & Password.
+Default credentials are.
+
+```
+Username = admin
+Password = 12345
+```
+### Prerequisites
+
+To run this application you need
+* .NET 4.6
+* SQL Server 2012
+* Adobe Acrobat Reader
+in your Computer.
+
+## Built With
+
+* WPF
+* Entity Framework 6
+* LINQ
+* Visual C#
+* SQL Server 2017
+* .NET Framework 4.6
+* Layer Architecture
+* Generic Repository Pattern
+* Visual Studio 2017
+
+## Some ScreenShots
+
+![Login Window](ScreenShots/Login.PNG?raw=true "Login Window")
+![Home Window](ScreenShots/Home.PNG?raw=true "Home Window")
+![NewSale Window](ScreenShots/NewSale.PNG?raw=true "NewSale Window")
+![SaleReport Window](ScreenShots/SaleReport.PNG?raw=true "SaleReport Window")
+![ManageStock Window](ScreenShots/ManageStock.PNG?raw=true "ManageStock Window")
+![AddNewStock Window](ScreenShots/AddNewStock.PNG?raw=true "AddNewStock Window")
+![ManageStaffs Window](ScreenShots/ManageStaffs.PNG?raw=true "ManageStaffs Window")
+![MiscControl Window](ScreenShots/MiscControl.PNG?raw=true "MiscControl Window")
+
+## Authors
+
+* **Rasedur Rahman Roxy** - [In Facebook](https://facebook.com/MdRoxy)
