@@ -4,7 +4,7 @@ A Point of Sale Application for a small business named NURTEX.
 
 ## Getting Started
 
-To test the application just go to [this link](https://github.com/kajal-alpha/NURTEX-PointOfSale/tree/master/NURTEX-POS/bin/Debug) and download Debug folder. Open NURTEX-POS.exe.config file and change the connection string here
+To test the application just download Debug folder. Open NURTEX-POS.exe.config file and change the connection string here
 
 ```
 <connectionStrings>
