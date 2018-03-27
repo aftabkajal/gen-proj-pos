@@ -4,7 +4,7 @@ A Point of Sale Application for a small business named NURTEX.
 
 ## Getting Started
 
-To test the application just go to [this link](https://gitlab.com/hard-rox/NURTEX-PointOfSale/tree/master/NURTEX-POS/bin/Debug) and download Debug folder. Open NURTEX-POS.exe.config file and change the connection string here
+To test the application just go to [this link](https://github.com/kajal-alpha/NURTEX-PointOfSale/tree/master/NURTEX-POS/bin/Debug) and download Debug folder. Open NURTEX-POS.exe.config file and change the connection string here
 
 ```
 <connectionStrings>
@@ -28,7 +28,8 @@ in your Computer.
 
 ## Built With
 
-* WPF
+* ASP.NET MVC
+* Razor Page
 * Entity Framework 6
 * LINQ
 * Visual C#
@@ -38,17 +39,7 @@ in your Computer.
 * Generic Repository Pattern
 * Visual Studio 2017
 
-## Some ScreenShots
-
-![Login Window](ScreenShots/Login.PNG?raw=true "Login Window")
-![Home Window](ScreenShots/Home.PNG?raw=true "Home Window")
-![NewSale Window](ScreenShots/NewSale.PNG?raw=true "NewSale Window")
-![SaleReport Window](ScreenShots/SaleReport.PNG?raw=true "SaleReport Window")
-![ManageStock Window](ScreenShots/ManageStock.PNG?raw=true "ManageStock Window")
-![AddNewStock Window](ScreenShots/AddNewStock.PNG?raw=true "AddNewStock Window")
-![ManageStaffs Window](ScreenShots/ManageStaffs.PNG?raw=true "ManageStaffs Window")
-![MiscControl Window](ScreenShots/MiscControl.PNG?raw=true "MiscControl Window")
 
 ## Authors
 
-* **Rasedur Rahman Roxy** - [In Facebook](https://facebook.com/MdRoxy)
+* **Md. Aftab Uddin Kajal** - [In Facebook](https://facebook.com/aftab.kajal)
