@@ -28,8 +28,7 @@ in your Computer.
 
 ## Built With
 
-* ASP.NET MVC
-* Razor Page
+* WPF
 * Entity Framework 6
 * LINQ
 * Visual C#
